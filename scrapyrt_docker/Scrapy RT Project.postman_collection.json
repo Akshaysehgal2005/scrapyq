@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "527ea011-a1ee-468e-ba46-fe48303d220b",
+		"name": "Scrapy RT Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hit scrapyrt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9080/crawl.json?spider_name=example&url=http://example.com/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9080",
+					"path": [
+						"crawl.json"
+					],
+					"query": [
+						{
+							"key": "spider_name",
+							"value": "example"
+						},
+						{
+							"key": "url",
+							"value": "http://example.com/"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hit handler",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/start?spider_name=example&url=http://example.com/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"start"
+					],
+					"query": [
+						{
+							"key": "spider_name",
+							"value": "example"
+						},
+						{
+							"key": "url",
+							"value": "http://example.com/"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

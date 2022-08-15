@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  scrapyrt:
+    build: ./project
+    image: akshay/scrapyrt_new
+    ports:
+      - 9080:9080
+
+  handler:
+    build: ./handler
+    image: akshay/handler
+    command: python handler.py
+    ports:
+      - 8001:8001
+
+  rq-workers:
+    image: akshay/handler
+    command: rq worker -u redis://redis-server:6379 high default low
+    deploy:
+      replicas: 3
+
+  redis-server:
+    image: redis:alpine
+    ports:
+      - 6379:6379
