@@ -22,3 +22,6 @@ docker-compose up
 ```
 
 To test API, import the POSTMAN collection `utils/postman_collection.json`
+
+### Architecture diagram:
+![plot](./utils/Architecture.png)
