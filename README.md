@@ -1,7 +1,7 @@
 # ScrapyDocker
 
 ### Project goal - 
-Create an async API which queues (and executes) scraping requests for input scrapy spider and url
+Create an async API which queues (and executes) scraping requests for a selected scrapy spider and url
 
 1. Expose scrapy project to an endpoint using scrapyrt - ![#c5f015](https://via.placeholder.com/15/c5f015/c5f015.png) Complete
 2. Create an external handler to handle scraping requests - ![#c5f015](https://via.placeholder.com/15/c5f015/c5f015.png) Complete
