@@ -1,4 +1,4 @@
-# ScrapyDocker
+# Scrapyq
 
 ### Project goal:
 
