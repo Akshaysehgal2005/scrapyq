@@ -1,6 +1,6 @@
 # ScrapyDocker
 
-### Project goal - 
+### Project goal:
 Create an async API which queues (and executes) scraping requests for a selected scrapy spider and url
 
 1. Expose `scrapy` project to an endpoint using `scrapyrt` - ![#c5f015](https://via.placeholder.com/15/c5f015/c5f015.png) Complete
@@ -10,8 +10,8 @@ Create an async API which queues (and executes) scraping requests for a selected
 5. Add `mongodb` backend to dump outputs - ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) Pending
 6. Add scheduler using `celery` - ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) Pending
 
-### Docker Stack: 
-scrapy, scrapyrt, flask, redis, rq
+### Stack: 
+`docker`, `python3.9`, `scrapy`, `scrapyrt`, `flask`, `redis`, `rq`
 
 
 ### To build and run docker containers:
