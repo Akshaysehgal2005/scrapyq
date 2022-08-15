@@ -1,12 +1,12 @@
 {
 	"info": {
 		"_postman_id": "527ea011-a1ee-468e-ba46-fe48303d220b",
-		"name": "Scrapy RT Project",
+		"name": "scrapyq",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Hit scrapyrt",
+			"name": "Hit scrapyrt directly",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -38,12 +38,12 @@
 			"response": []
 		},
 		{
-			"name": "Hit handler",
+			"name": "Start scraping (handler)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8001/start?spider_name=example&url=http://example.com/",
+					"raw": "http://127.0.0.1:8001/start?spider_name=example&url=https://www.example.com/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -62,7 +62,36 @@
 						},
 						{
 							"key": "url",
-							"value": "http://example.com/"
+							"value": "https://www.example.com/"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get result (handler)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/result?job_id=550de549-600f-4a9a-ae4d-4da15382d8c9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"result"
+					],
+					"query": [
+						{
+							"key": "job_id",
+							"value": "550de549-600f-4a9a-ae4d-4da15382d8c9",
+							"description": "Replace the job id here after running previous call"
 						}
 					]
 				}
