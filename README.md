@@ -12,3 +12,13 @@ Create an async API which queues (and executes) scraping requests for input scra
 
 ### Docker Stack: 
 scrapy, scrapyrt, flask, redis, rq
+
+
+### To build and run docker containers:
+```
+cd scrapyrt_docker
+docker-compose build --no-cache
+docker-compose up
+```
+
+To test API, import the POSTMAN collection `Scrapy RT Project.postman_collection.json`
