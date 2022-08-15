@@ -1,7 +1,8 @@
 # ScrapyDocker
 
 ### Project goal:
-Create an async API which queues (and executes) scraping requests for a selected scrapy spider and url
+
+Containerized, asynchronous request handling daemon for scrapy spiders.
 
 1. Expose `scrapy` project to an endpoint using `scrapyrt` - ![#c5f015](https://via.placeholder.com/15/c5f015/c5f015.png) Complete
 2. Create an external handler to handle scraping requests - ![#c5f015](https://via.placeholder.com/15/c5f015/c5f015.png) Complete
@@ -9,6 +10,9 @@ Create an async API which queues (and executes) scraping requests for a selected
 4. Replace `rq` with `celery` - ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) Pending
 5. Add `mongodb` backend to dump outputs - ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) Pending
 6. Add scheduler using `celery` - ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) Pending
+
+### Architecture diagram:
+![plot](./utils/Architecture.png)
 
 ### Stack: 
 `docker`, `python3.9`, `scrapy`, `scrapyrt`, `flask`, `redis`, `rq`
@@ -22,6 +26,3 @@ docker-compose up
 ```
 
 To test API, import the POSTMAN collection `utils/postman_collection.json`
-
-### Architecture diagram:
-![plot](./utils/Architecture.png)
