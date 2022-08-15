@@ -2,7 +2,7 @@
 
 ### Project goal:
 
-Containerized, asynchronous request handling daemon for scrapy spiders.
+Containerized, distributed asyc request handling daemon for scrapy spiders.
 
 1. Expose `scrapy` project to an endpoint using `scrapyrt` - ![#c5f015](https://via.placeholder.com/15/c5f015/c5f015.png) Complete
 2. Create an external handler to handle scraping requests - ![#c5f015](https://via.placeholder.com/15/c5f015/c5f015.png) Complete
