@@ -17,10 +17,12 @@ services:
   rq-workers:
     image: akshay/handler
     command: rq worker -u redis://redis-server:6379 high default low
+    restart: unless-stopped
     deploy:
       replicas: 3
-
+    
   redis-server:
     image: redis:alpine
     ports:
       - 6379:6379
+    restart: unless-stopped
