@@ -20,7 +20,7 @@ Containerized, distributed asyc request handling daemon for scrapy spiders. This
 
 ### To build and run docker containers:
 ```
-cd scrapyrt_docker
+cd scrapyq
 docker-compose build --no-cache
 docker-compose up
 ```
