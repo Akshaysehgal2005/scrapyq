@@ -3,7 +3,7 @@ version: '3.7'
 services:
   scrapyrt:
     build: ./project
-    image: akshay/scrapyrt_new
+    image: akshay/scrapyrt
     ports:
       - 9080:9080
 
