@@ -25,4 +25,4 @@ docker-compose build --no-cache
 docker-compose up
 ```
 
-To test API, import the POSTMAN collection `utils/postman_collection.json`
+To test API, import the POSTMAN collection `utils/scrapyq.postman_collection.json`
