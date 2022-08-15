@@ -1,3 +1,4 @@
+from multiprocessing import connection
 from flask import Flask, request
 from models import background
 
@@ -16,9 +17,26 @@ def start():
     
     job = q.enqueue(background, args=(spider_name, url))
     return f"Task queued {job.id}, {len(q)} number of tasks left in queue"
-    
-    #target = background(spider_name, url)
-    #return requests.get(target).json()
+
+
+def results(jobid):
+    return str(q.fetch_job(jobid))
+
+@app.route('/result')
+def get_result():
+    job_id  = request.args.get('job_id', None)
+    job = q.fetch_job(job_id)
+
+    if job.is_finished:
+        ret = job.return_value
+    elif job.is_queued:
+        ret = {'status':'in-queue'}
+    elif job.is_started:
+        ret = {'status':'waiting'}
+    elif job.is_failed:
+        ret = {'status': 'failed'}
+    return str(ret)
+
 
 if __name__=="__main__":
     app.run(debug=True, host='0.0.0.0',port=8001)
