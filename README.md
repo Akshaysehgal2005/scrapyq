@@ -25,18 +25,22 @@ docker-compose build --no-cache
 docker-compose up
 ```
 
+Add your custom scrapy spiders to `scrapyq/project/project/spiders/` similar to `example.py`.
+
 To test API, import the POSTMAN collection `utils/scrapyq.postman_collection.json`
 
-**Start scraping:** 
+**1. Start scraping:** 
 
 ```
 http://127.0.0.1:8001/start?spider_name=example&url=https://www.example.com/
 
 > Task queued 550de549-600f-4a9a-ae4d-4da15382d8c9, 0 number of tasks left in queue
 ```
-Run this request multiple times via POSTMAN to queue requests in redis.
+Run this request multiple times via POSTMAN to queue requests in redis. 
 
-**Fetch status/result:**
+Change the spider_name and url for custom spiders and different targets.
+
+**2. Fetch status/result:**
 
 ```
 http://127.0.0.1:8001/result?job_id=550de549-600f-4a9a-ae4d-4da15382d8c9
