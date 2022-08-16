@@ -45,8 +45,6 @@ Change the spider_name and url for custom spiders and different targets.
 ```
 http://127.0.0.1:8001/result?job_id=550de549-600f-4a9a-ae4d-4da15382d8c9
 
-> http://127.0.0.1:8001/result?job_id=550de549-600f-4a9a-ae4d-4da15382d8c9
-
 > [{'header': 'Example Domain', 'paragraphs': 'This domain is for use in illustrative examples in documents. You may use
 this\n domain in literature without prior coordination or asking for permission.'}]
 ```
