@@ -1,4 +1,4 @@
-# Scrapyq
+# Scrapyq (Redis - RQ)
 
 ### Project goal:
 
