@@ -45,14 +45,7 @@ Change the spider_name and url for custom spiders and different targets.
 ```
 http://127.0.0.1:8001/result?job_id=550de549-600f-4a9a-ae4d-4da15382d8c9
 
-> {'status': 'ok', 'items': [{'header': 'Example Domain', 'paragraphs': 'This domain is for use in illustrative examples
-in documents. You may use this\n domain in literature without prior coordination or asking for permission.'}],
-'spider_name': 'example', 'stats': {'downloader/request_bytes': 438, 'downloader/request_count': 2,
-'downloader/request_method_count/GET': 2, 'downloader/response_bytes': 1992, 'downloader/response_count': 2,
-'downloader/response_status_count/200': 1, 'downloader/response_status_count/404': 1, 'finish_reason': 'finished',
-'finish_time': '2022-08-15 14:47:28', 'item_scraped_count': 1, 'log_count/DEBUG': 3, 'log_count/INFO': 8,
-'memusage/max': 104218624, 'memusage/startup': 104218624, 'response_received_count': 2, 'scheduler/dequeued': 1,
-'scheduler/dequeued/memory': 1, 'scheduler/enqueued': 1, 'scheduler/enqueued/memory': 1, 'start_time': '2022-08-15
-14:47:26'}, 'items_dropped': []}
+> [{'header': 'Example Domain', 'paragraphs': 'This domain is for use in illustrative examples in documents. You may use
+this\n domain in literature without prior coordination or asking for permission.'}])
 ```
 Replace the job_id with the ones that are recieved from the first API call(s).
