@@ -28,7 +28,7 @@ def get_result():
     job = q.fetch_job(job_id)
 
     if job.is_finished:
-        ret = job.return_value
+        ret = job.return_value['items']
     elif job.is_queued:
         ret = {'status':'in-queue'}
     elif job.is_started:
